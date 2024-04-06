@@ -15,8 +15,8 @@ class ViewController: UIViewController,SkeletonTableViewDataSource,SkeletonTable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableview.rowHeight = 120
-        tableview.estimatedRowHeight = 120
+        tableview.rowHeight = 90
+        tableview.estimatedRowHeight = 90
         tableview.dataSource = self
         tableview.delegate = self
         
@@ -25,19 +25,19 @@ class ViewController: UIViewController,SkeletonTableViewDataSource,SkeletonTable
                 self.data.append("Row Numbers")
             }
             
-           // self.tableview.stopSkeletonAnimation()
+            self.tableview.stopSkeletonAnimation()
+            self.view.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
             self.tableview.reloadData()
         })
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tableview.isSkeletonable = true
-        //tableview.showSkeleton(usingColor: .greenSea, transition: .crossDissolve(0.25))
-        //tableview.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .gray), animation: nil, transition: .crossDissolve(0.25))
-        tableview.showSkeleton(usingColor: .wetAsphalt, transition: .crossDissolve(0.25))
         
-       // tableview.showSkeleton(usingColor: .lightGray, transition: .slideLeft(duration: 0.5))
+        tableview.isSkeletonable = true
+        
+        tableview.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .lightGray), animation: nil, transition: .crossDissolve(0.25))
+        
 
     }
     
