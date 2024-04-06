@@ -13,6 +13,8 @@
 		2B99DF252BC00EAC00AB069F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B99DF232BC00EAC00AB069F /* Main.storyboard */; };
 		2B99DF272BC00EAE00AB069F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B99DF262BC00EAE00AB069F /* Assets.xcassets */; };
 		2B99DF2A2BC00EAE00AB069F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B99DF282BC00EAE00AB069F /* LaunchScreen.storyboard */; };
+		2B99DF342BC1205D00AB069F /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 2B99DF332BC1205D00AB069F /* SkeletonView */; };
+		2B99DF362BC128A400AB069F /* cellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99DF352BC128A400AB069F /* cellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		2B99DF262BC00EAE00AB069F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B99DF292BC00EAE00AB069F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B99DF2B2BC00EAE00AB069F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B99DF352BC128A400AB069F /* cellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B99DF342BC1205D00AB069F /* SkeletonView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				2B99DF1D2BC00EAC00AB069F /* AppDelegate.swift */,
 				2B99DF1F2BC00EAC00AB069F /* SceneDelegate.swift */,
 				2B99DF212BC00EAC00AB069F /* ViewController.swift */,
+				2B99DF352BC128A400AB069F /* cellTableViewCell.swift */,
 				2B99DF232BC00EAC00AB069F /* Main.storyboard */,
 				2B99DF262BC00EAE00AB069F /* Assets.xcassets */,
 				2B99DF282BC00EAE00AB069F /* LaunchScreen.storyboard */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "Shimmer-tipu";
+			packageProductDependencies = (
+				2B99DF332BC1205D00AB069F /* SkeletonView */,
+			);
 			productName = "Shimmer-tipu";
 			productReference = 2B99DF1A2BC00EAC00AB069F /* Shimmer-tipu.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 2B99DF112BC00EAC00AB069F;
+			packageReferences = (
+				2B99DF322BC1205D00AB069F /* XCRemoteSwiftPackageReference "SkeletonView" */,
+			);
 			productRefGroup = 2B99DF1B2BC00EAC00AB069F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B99DF222BC00EAC00AB069F /* ViewController.swift in Sources */,
+				2B99DF362BC128A400AB069F /* cellTableViewCell.swift in Sources */,
 				2B99DF1E2BC00EAC00AB069F /* AppDelegate.swift in Sources */,
 				2B99DF202BC00EAC00AB069F /* SceneDelegate.swift in Sources */,
 			);
@@ -361,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B99DF322BC1205D00AB069F /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.30.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B99DF332BC1205D00AB069F /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B99DF322BC1205D00AB069F /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B99DF122BC00EAC00AB069F /* Project object */;
 }
